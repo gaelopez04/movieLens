@@ -1,12 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
-const API_KEY = 'd3628dc1c9bf157fe8f607fe2482e64e'
-
 
 function MyApp() {
-  
-
   return(
     <h1>Checkout console</h1>
   );

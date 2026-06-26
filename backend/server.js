@@ -3,7 +3,6 @@ import express from 'express';
 import cors from 'cors';
 
 const API_KEY = process.env.TMDB_API_KEY;
-console.log(API_KEY);
 
 
 const app = express();

@@ -174,7 +174,7 @@ function DivMovie({movie, credits, reviewsData, streaming, goBack, handleClick})
   return(
     <>
       <div className={goBack ? "DivAll ani" : "DivAll"}>
-        <button className="goBack" onClick={handleClick}> go Back. </button>
+        <button className="goBack" onClick={handleClick}> Go back. </button>
 
          <div className="DivMovie">
         <div className="DivMovieLeft">

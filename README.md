@@ -27,8 +27,8 @@ A movie discovery app built with React and Node.js, powered by the TMDB API.
 ### Backend
 cd backend
 npm install
-# create a .env file with:
-# TMDB_API_KEY=your_key_here
+create a .env file with:
+TMDB_API_KEY=your_key_here
 node server.js
 
 ### Frontend

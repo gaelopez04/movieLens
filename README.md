@@ -2,7 +2,8 @@
 A movie discovery app built with React and Node.js, powered by the TMDB API.
 
 ## Preview
-![movieLens screenshot 1](./public/screenshot.png)
+![movieLens screenshot 1](./public/movieLens1.png)
+![movieLens screenshot 2](./public/Screenshot 2026-06-25 172303.png)
 
 ## Features
 - Search movies with live autocomplete

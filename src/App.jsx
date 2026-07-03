@@ -352,6 +352,25 @@ function MovieTag({ popularMovie, creditPopularMovie, reviews }) {
   );
 }
 
+function ReviewItem({ review }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = review.length > 300;
+  const text = expanded || !isLong
+    ? review
+    : review.slice(0, 150) + "…";
+
+  return (
+    <>
+      <label className="review">"{text}"</label>
+      {isLong && (
+        <button onClick={() => setExpanded(e => !e)} className="read_">
+          {expanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </>
+  );
+}
+
 function DivAbove({ onMovie }) {
   const [genreData, setGenreData] = useState([]);
 

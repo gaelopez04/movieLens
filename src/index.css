@@ -206,8 +206,7 @@ html {
 }
 
 .DivContainer {
-  width: 100%;
-  max-width: 1312px;
+  margin-right: 4%;
   height: 455px;
   margin-left: 4%;
   margin-top: 2%;
@@ -289,7 +288,7 @@ html {
   background-color: rgb(20, 20, 20);
   border-radius: 9px;
   margin-top: 35px;
-  margin-left: 35px;
+  margin-left: 100px;
   margin-bottom: 30px;
   max-width: 420px;
   max-height: 400px;

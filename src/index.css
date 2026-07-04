@@ -16,9 +16,7 @@ html {
 
 .whole {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 24px;
+  margin: 0;
   box-sizing: border-box;
 }
 

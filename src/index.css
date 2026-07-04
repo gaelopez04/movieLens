@@ -208,7 +208,7 @@ html {
 .DivContainer {
   width: min(100%, 1312px);
   max-width: 1312px;
-  height: clamp(320px, 32vw, 455px);
+  height: clamp(320px, 30vw, 560px);
   margin-left: 4%;
   margin-top: 2%;
   border-radius: 7px;

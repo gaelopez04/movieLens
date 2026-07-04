@@ -286,10 +286,11 @@ html {
 
 .peekReview {
   background-color: rgb(20, 20, 20);
-  border-radius: 9px;
+  margin-left: auto;
   margin-top: 35px;
-  margin-left: 100px;
+  margin-right: 40px;
   margin-bottom: 30px;
+  border-radius: 9px;
   max-width: 420px;
   max-height: 400px;
   width: 100%;

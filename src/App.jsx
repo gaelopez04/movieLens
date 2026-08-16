@@ -255,25 +255,40 @@ function DivMedium({onMovie}) {
   const [popular20Movies, setPopular20Movies] = useState([]);
   const [creditsPM, setCreditsPM] = useState(null);
   const [reviews, setReviews] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getPopularMovies() {
-      const res = await fetch(`${API_BASE}/api/movies/popular`);
-      const data = await res.json();
-      setPopular20Movies(data);
-      
-      let movieId = data[0].id;
+      try {
+        setLoading(true);
+        const res = await fetch(`${API_BASE}/api/movies/popular`);
+        const data = await res.json();
+        setPopular20Movies(data);
 
-      const res1 = await fetch(`${API_BASE}/api/movie/${movieId}`);
-      const data1 = await res1.json();
-      setCreditsPM(data1.credits);
-      setReviews(data1.reviews.results);
-      
+        if (data[0]?.id) {
+          const res1 = await fetch(`${API_BASE}/api/movie/${data[0].id}`);
+          const data1 = await res1.json();
+          setCreditsPM(data1.credits);
+          setReviews(data1.reviews.results);
+        }
+      } catch (error) {
+        console.error('Error loading popular movies:', error);
+      } finally {
+        setLoading(false);
+      }
     }
-    
+
     getPopularMovies();
   }, []);
 
+  if (loading) {
+    return (
+      <div className="loadingScreen">
+        <div className="spinner" />
+        <span>Loading movies...</span>
+      </div>
+    );
+  }
 
   const postersMovie = popular20Movies.map((movie, _) => {
 
